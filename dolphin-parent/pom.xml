@@ -7,6 +7,7 @@
   <groupId>com.dolphin.parent</groupId>
   <artifactId>dolphin-parent</artifactId>
   <version>${dolphin.parent.version}</version>
+  <packaging>jar</packaging>
 
   <name>dolphin-parent</name>
   <!-- FIXME change it to the project's website -->
@@ -16,14 +17,30 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <dolphin.parent.version>2.0-SNAPSHOT</dolphin.parent.version>
     <junit.version>4.12</junit.version>
+    <ganymed-ssh2.version>262</ganymed-ssh2.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>${junit.version}</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>ch.ethz.ganymed</groupId>
+        <artifactId>ganymed-ssh2</artifactId>
+        <version>${ganymed-ssh2.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+        <scope>test</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 </project>
