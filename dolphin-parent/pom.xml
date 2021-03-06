@@ -7,7 +7,7 @@
   <groupId>com.dolphin.parent</groupId>
   <artifactId>dolphin-parent</artifactId>
   <version>${dolphin.parent.version}</version>
-  <packaging>jar</packaging>
+  <packaging>pom</packaging>
 
   <name>dolphin-parent</name>
   <!-- FIXME change it to the project's website -->

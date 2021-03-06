@@ -23,7 +23,7 @@ public class Test {
       conn.connect();
       boolean isAuthenticated = conn.authenticateWithPassword(username, password);
 
-      if (isAuthenticated == false) {
+      if (!isAuthenticated) {
         throw new IOException("Authentication failed.");
       }
 
